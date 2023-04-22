@@ -125,6 +125,8 @@ public:
 
 	void ResetAnimState();
 	/*----- START OF GETTER AND SETTERS ------*/
+	TObjectPtr<UProgressBarManager> GetHealthBar();
+
 	void SetAnimState(EAnimationState State);
 
 	void SetLeftClickAttackCount(uint8 Count);

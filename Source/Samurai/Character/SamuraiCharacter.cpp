@@ -125,7 +125,7 @@ void ASamuraiCharacter::Tick(float DeltaTime) {
 			SetCharacterSpeed(MoveValue);
 		}
 		else {
-			// SetTick(false);
+			SetTick(false);
 		}
 	}
 
@@ -345,6 +345,10 @@ void ASamuraiCharacter::SetLeftClickAttackCount(uint8 Count) {
 	LeftClickAttackCount = Count;
 }
 /*----- END OF GETTER AND SETTERS ------*/
+
+TObjectPtr<UProgressBarManager> ASamuraiCharacter::GetHealthBar() {
+	return HealthBar;
+}
 
 bool ASamuraiCharacter::IsDefaultState() {
 	return AnimState == EAnimationState::Default;
